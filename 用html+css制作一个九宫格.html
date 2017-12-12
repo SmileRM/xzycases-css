@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>用html+css制作一个九宫格</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        .con{
+            width:100%;
+            margin:0 auto;
+        }
+        .box{
+            width:29.33%;
+            padding:0 0 29.33% 0;
+            background:#50a3a2;
+            margin:3% 0 0 3%;
+            float:left;
+            border-radius:6%;
+        }
+
+          /*
+           *  原理：
+           *    设置body的高度为100%并不会起作用。
+           *    自适应就不要固定宽高，一律通过百分比表示。
+           *    宽度设置100%就是可视区域的宽度，高度应该怎么定义，此时就需要padding出马。
+           *    一个元素的 padding，如果值是一个百分比，那这个百分比是相对于其父元素的宽度而言的。
+           *    在计算 Overflow 时，是将元素的内容区域（即 width / height 对应的区域）和 Padding 区域一起计算的。
+           *    综上所述，我们可以使用padding-bottom或者padding-top来代替 height 来实现高度与宽度成比例的效果。
+           *
+           */
+    </style>
+</head>
+<body>
+<div class="con">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
